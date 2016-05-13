@@ -63,6 +63,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="C_B\BrokerRequest.vb" />
+    <Compile Include="C_B\IRequestTransaction.vb" />
+    <Compile Include="C_B\MpesaRequestTransaction.vb" />
+    <Compile Include="C_B\ServiceProvider.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
