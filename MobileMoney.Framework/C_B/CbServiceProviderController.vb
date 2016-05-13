@@ -2,7 +2,7 @@
 Imports System.Net
     Imports System.Web.Http
 
-Namespace Controllers
+Namespace C_B
     Public Class CbServiceProviderController
         Inherits ApiController
 
@@ -19,7 +19,7 @@ Namespace Controllers
 
 
         ' POST: api/CbServiceProviderController
-        Public Sub PostValue(ByVal value As BrokerRequest)
+        Public Sub PostValue(ByVal value As C_B.BrokerRequest)
 
 
 

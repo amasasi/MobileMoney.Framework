@@ -1,7 +1,11 @@
-﻿Public Class BrokerRequest
-    Public Property resultURL As String
-    Public Property transaction As IRequestTransaction
+﻿Namespace C_B
+    Public Class BrokerRequest
+        Public Property resultURL As String
 
-    Public Property serviceProvider As ServiceProvider
+        <Newtonsoft.Json.JsonConverter(GetType(Converters.IRequestTransactionConverter))>
+        Public Property transaction As IRequestTransaction
 
-End Class
+        Public Property serviceProvider As ServiceProvider
+
+    End Class
+End Namespace

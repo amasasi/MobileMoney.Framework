@@ -1,34 +1,35 @@
 ﻿Imports MobileMoney.Framework
+Namespace C_B
+    Public Class MpesaRequestTransaction
+        Implements IRequestTransaction
 
-Public Class MpesaRequestTransaction
-    Implements IRequestTransaction
-
-    Public Property accountReference As String Implements IRequestTransaction.accountReference
-
-
-    Public Property amount As Decimal Implements IRequestTransaction.amount
+        Public Property accountReference As String Implements IRequestTransaction.accountReference
 
 
-    Public Property commandID As String Implements IRequestTransaction.commandID
-
-    Public Property conversationID As String Implements IRequestTransaction.conversationID
+        Public Property amount As Decimal Implements IRequestTransaction.amount
 
 
-    Public Property initiator As String Implements IRequestTransaction.initiator
+        Public Property commandID As String Implements IRequestTransaction.commandID
+
+        Public Property conversationID As String Implements IRequestTransaction.conversationID
 
 
-    Public Property originatorConversationID As String Implements IRequestTransaction.originatorConversationID
+        Public Property initiator As String Implements IRequestTransaction.initiator
 
 
-    Public Property mpesaReceipt As String Implements IRequestTransaction.Receipt
+        Public Property originatorConversationID As String Implements IRequestTransaction.originatorConversationID
 
 
-    Public Property recipient As Integer Implements IRequestTransaction.recipient
+        Public Property mpesaReceipt As String Implements IRequestTransaction.Receipt
 
 
-    Public Property transactionDate As Date Implements IRequestTransaction.transactionDate
+        Public Property recipient As Integer Implements IRequestTransaction.recipient
 
 
-    Public Property transactionID As String Implements IRequestTransaction.transactionID
+        Public Property transactionDate As Date Implements IRequestTransaction.transactionDate
 
-End Class
+
+        Public Property transactionID As String Implements IRequestTransaction.transactionID
+
+    End Class
+End Namespace

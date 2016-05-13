@@ -75,8 +75,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\CbServiceProviderController.vb" />
+    <Compile Include="C_B\CbServiceProviderController.vb" />
     <Compile Include="C_B\BrokerRequest.vb" />
+    <Compile Include="C_B\Converters\IRequestTransactionConverter.vb" />
     <Compile Include="C_B\IRequestTransaction.vb" />
     <Compile Include="C_B\MpesaRequestTransaction.vb" />
     <Compile Include="C_B\ServiceProvider.vb" />
