@@ -1,7 +1,7 @@
 ﻿Imports MobileMoney.Framework
 Namespace C_B
     Public Class MpesaRequestTransaction
-        Implements IRequestTransaction
+        Implements IRequestTransaction, IRequestTransactionMetaData
 
         Public Property accountReference As String Implements IRequestTransaction.accountReference
 
@@ -11,13 +11,13 @@ Namespace C_B
 
         Public Property commandID As String Implements IRequestTransaction.commandID
 
-        Public Property conversationID As String Implements IRequestTransaction.conversationID
+        Public Property conversationID As String Implements IRequestTransactionMetaData.conversationID
 
 
         Public Property initiator As String Implements IRequestTransaction.initiator
 
 
-        Public Property originatorConversationID As String Implements IRequestTransaction.originatorConversationID
+        Public Property originatorConversationID As String Implements IRequestTransactionMetaData.originatorConversationID
 
 
         Public Property mpesaReceipt As String Implements IRequestTransaction.Receipt
@@ -26,10 +26,10 @@ Namespace C_B
         Public Property recipient As Integer Implements IRequestTransaction.recipient
 
 
-        Public Property transactionDate As Date Implements IRequestTransaction.transactionDate
+        Public Property transactionDate As Date Implements IRequestTransactionMetaData.transactionDate
 
 
-        Public Property transactionID As String Implements IRequestTransaction.transactionID
+        Public Property transactionID As String Implements IRequestTransactionMetaData.transactionID
 
     End Class
 End Namespace

@@ -79,6 +79,7 @@
     <Compile Include="C_B\BrokerRequest.vb" />
     <Compile Include="C_B\Converters\IRequestTransactionConverter.vb" />
     <Compile Include="C_B\IRequestTransaction.vb" />
+    <Compile Include="C_B\IRequestTransactionMetaData.vb" />
     <Compile Include="C_B\MpesaRequestTransaction.vb" />
     <Compile Include="C_B\ServiceProvider.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
