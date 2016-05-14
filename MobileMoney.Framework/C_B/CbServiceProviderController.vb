@@ -22,8 +22,22 @@ Namespace C_B
         Public Sub PostValue(ByVal value As C_B.BrokerRequest)
 
 
+            FrameworkFactory.Initilize()
 
 
+            Dim job = Quartz.JobBuilder.Create(Of RequestProcessJob)().Build()
+
+            Dim trigger = Quartz.TriggerBuilder.Create()
+            trigger.StartNow()
+
+
+            Dim serializesettings = New Newtonsoft.Json.JsonSerializerSettings()
+
+            serializesettings.TypeNameHandling = Newtonsoft.Json.TypeNameHandling.All
+
+            Dim serialized_data = Newtonsoft.Json.JsonConvert.SerializeObject(value, serializesettings)
+            job.JobDataMap.Add("c_bdata", serialized_data)
+            Quartz.Impl.StdSchedulerFactory.GetDefaultScheduler().ScheduleJob(job, trigger.Build)
         End Sub
 
         ' PUT: api/CbServiceProviderController/5
